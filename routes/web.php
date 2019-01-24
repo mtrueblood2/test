@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get('/contact/create', 'ContactController@create');
+Route::post('/contact', 'ContactController@store');

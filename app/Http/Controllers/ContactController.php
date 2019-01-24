@@ -3,18 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Contact;
 
 class ContactController extends Controller
 {
-    public function store(Request $request){
+    public function store(){
 
-    	// TODO validate input
+    	$validated = request()->validate([
 
-    	// Build up object
+    		'name' => 'required|max:255',
+    		'email' => 'email|required|max:255',
+    		'message' => 'required'
 
-    	// Save object
+    	]);
 
-    	// Redirect to thank you page
+    	Contact::create($validated);
 
+    	return view('contact.thankyou');
+
+    }
+
+    public function create(){
+
+    	return view('contact.form');
     }
 }
