@@ -1,6 +1,6 @@
-<footer class="text-muted">
+<footer class="footer mt-auto py-3 bg-secondary">
   <div class="container">
 
-    <p class="lead">This site is &copy; Matt Trueblood, please fill out our form so that we can contact you!</p>
+    <p class="text-light">&copy;Matt Trueblood, please fill out the <a href="/contact/create" title="Contact me" class="font-weight-bold text-light">form</a> so that we can contact you!</p>
   </div>
 </footer>

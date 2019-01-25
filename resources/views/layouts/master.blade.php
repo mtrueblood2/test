@@ -24,16 +24,15 @@
 				position:relative;
 				margin: 0;
 			}
-			footer {
-				position: absolute;
-				bottom:0;
+			.main-content{
+				min-height:75vh;
 			}
 		</style>
 
 	</head>
 	<body>
 		@include('partials.header')
-		<div class="container-fluid">
+		<div class="container-fluid main-content">
 			@yield('content')
 		</div>
 		@include('partials.footer')
